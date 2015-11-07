@@ -68,12 +68,11 @@ def performance_test_0_load(filename, freq, data_match, data_miss, odir):
 	
 	# N value
 	#prob = int(sys.argv[2]);
-	prob = int(N)
 	# frequency
 	# mult = (int(sys.argv[3])/10)+1
 	mult = (int(freq)/10)+1;
 
-	print "Data ", data, " Multiplier = ", mult
+	print "Data_LOAD ", data_miss, " Multiplier = ", mult
 
 	infoList = [];
 	## ---------------------------------

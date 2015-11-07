@@ -73,9 +73,9 @@ if __name__ == '__main__':
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
     #pattern1 = performance_Test_0("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
-	data_match=32767
-	data_miss=0
-	pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
+    data_match=32767
+    data_miss=0
+    pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
 	#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
 
     visualizer1 = inputVisualizer( pattern1.getFilename() );
