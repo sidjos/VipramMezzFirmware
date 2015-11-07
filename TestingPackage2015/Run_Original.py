@@ -39,8 +39,8 @@ parser.add_option('--freq',action="store",type="int",dest="freq",default=50)
 parser.add_option('--NStress',action="store",type="int",dest="NStress",default=0)
 
 
-parser.add_option('--load',action="store",type="int",dest="load",default=False)
-parser.add_option('--run',action="store",type="int",dest="run",default=False)
+parser.add_option('--load',action="store_true",dest="load",default=True)
+parser.add_option('--run',action="store_true",dest="run",default=True)
 
 
 parser.add_option('--vprech',action="store",type="int",dest="vprech",default=38)
@@ -79,38 +79,38 @@ if __name__ == '__main__':
     data_match=32767
     data_miss=0
 	
-	if options.load==True:
-		print "Loading Full Chip..............................."
-		pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
-		#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
-		visualizer1 = inputVisualizer( pattern1.getFilename() );
-		bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
-		vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
-		offset = 1;
-		vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
-		vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
-		vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
-		time.sleep(1);
-		if options.Load: vc1.runPowerTest(bits,1);
-		else: vc1.runPowerTest(bits,1,True,1);
-		print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
-		print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
-		print "len(vc1._i_vdd) = ", len(vc1._i_prech)
-	
-	if options.run==True:
-		print "Run and check mode for Full Chip..............................."
-		pattern1 = performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
-		visualizer1 = inputVisualizer( pattern1.getFilename() );
-		bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
-		vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
-		offset = 1;
-		vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
-		vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
-		vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
-		time.sleep(1);
-		if options.Load: vc1.runPowerTest(bits,1);
-		else: vc1.runPowerTest(bits,1,True,1);
-		print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
-		print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
-		print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+    if options.load==True:
+	print "Loading Full Chip..............................."
+	pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
+	#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
+	visualizer1 = inputVisualizer( pattern1.getFilename() );
+	bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
+	vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
+	offset = 1;
+	vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
+	vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
+	vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
+	time.sleep(1);
+	if options.Load: vc1.runPowerTest(bits,1);
+	else: vc1.runPowerTest(bits,1,True,1);
+	print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
+	print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
+	print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+
+    if options.run==True:
+	print "Run and check mode for Full Chip..............................."
+	pattern1 = performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
+	visualizer1 = inputVisualizer( pattern1.getFilename() );
+	bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
+	vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
+	offset = 1;
+	vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
+	vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
+	vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
+	time.sleep(1);
+	if options.Load: vc1.runPowerTest(bits,1);
+	else: vc1.runPowerTest(bits,1,True,1);
+	print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
+	print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
+	print "len(vc1._i_vdd) = ", len(vc1._i_prech)
 
