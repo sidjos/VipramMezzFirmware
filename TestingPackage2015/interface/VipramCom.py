@@ -7,7 +7,8 @@ import os
 
 import datetime
 
-sys.path.insert(0, '../interface')
+sys.path.insert(0, './interface')
+sys.path.insert(0, './data')
 from pVIPRAM_inputBuilderClass import *
 from pVIPRAM_inputVisualizerClass import *
 
@@ -24,7 +25,7 @@ class VipramCom:
 		self._vdd = vdd;
 		self._dvdd = dvdd;
 
-        self._manager = uhal.ConnectionManager("file://../data/vipram_connections.xml");
+        self._manager = uhal.ConnectionManager("file://./data/vipram_connections.xml");
         self._hw = self._manager.getDevice("Mezz1")
         uhal.setLogLevelTo( uhal.LogLevel.ERROR )
         #self._hw.dispatch();

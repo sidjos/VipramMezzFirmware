@@ -12,7 +12,8 @@ from optparse import OptionParser
 import os
 import random
 
-sys.path.insert(0, '../interface')
+sys.path.insert(0, './interface')
+sys.path.insert(0, './data')
 from pVIPRAM_inputBuilderClass import *
 from pVIPRAM_inputVisualizerClass import *
 from VipramCom import *
