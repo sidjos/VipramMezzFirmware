@@ -59,6 +59,58 @@ def exampleTest1(filename):
 	inputPattern.close();
 	return inputPattern;
 
+	
+	
+
+def performance_Test_0(filename, N, freq, odir, loadMode):
+
+	inputP = inputBuilder(odir + "/" + filename + ".root")
+	inputP.initializeLoadPhase()
+	
+	# N value
+	#prob = int(sys.argv[2]);
+	prob = int(N)
+	# frequency
+	# mult = (int(sys.argv[3])/10)+1
+	mult = (int(freq)/10)+1;
+
+	print "N% = ", prob, ", Multiplier = ", mult
+
+	# n rows
+	#nrows = 128;
+	nrows = 6;
+	ncols = 32;
+
+	infoList = [];
+	## ---------------------------------
+	## Load mode
+	print "RUNNING LOAD MODE!!"
+	for row in range(0,128):
+		tmpInfoList = [];
+		for col in range(0, 32):
+			if (random.randint(1, 100) > prob):
+				inputP.loadSinglePattern(row, col, [0, 0, 0, 0], mult)
+				tmpInfoList.append(0);
+			else:
+				inputP.loadSinglePattern(row, col, [32767, 32767, 32767, 32767], mult)
+
+				tmpInfoList.append(1);
+		infoList.append( tmpInfoList );
+
+	print "RUN LOAD+CHECK MODE!!"
+	inputP.initializeRunPhase([1, 0, 0, 0],22,[16384,16384,16384,16384]);    
+	for i in range(1):
+		# if i % 1000 == 0: print i;
+		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);
+		inputP.checkPattern([32767, 32767, 32767, 32767], 22);
+		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);
+		inputP.readOutMode_withDelay(10*mult);
+		inputP.initializeRunPhase([1, 0, 0, 0],22,[16384,16384,16384,16384]);
+
+	print "done"
+	inputP.close();
+	return inputP;
+
 #########################################################
 #########################################################
 #########################################################
