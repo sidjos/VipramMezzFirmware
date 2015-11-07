@@ -21,9 +21,9 @@ class VipramCom:
         self._freq = freq;
         self._odir = odir;
 		
-		self._vprech = vprech;
-		self._vdd = vdd;
-		self._dvdd = dvdd;
+	self._vprech = vprech;
+	self._vdd = vdd;
+	self._dvdd = dvdd;
 
         self._manager = uhal.ConnectionManager("file://./data/vipram_connections.xml");
         self._hw = self._manager.getDevice("Mezz1")
