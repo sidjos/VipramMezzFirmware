@@ -37,6 +37,13 @@ parser.add_option('--reset', action='store_true', dest='reset', default=False, h
 parser.add_option('--freq',action="store",type="int",dest="freq",default=50)
 parser.add_option('--NStress',action="store",type="int",dest="NStress",default=0)
 
+
+parser.add_option('--vprech',action="store",type="int",dest="vprech",default=38)
+parser.add_option('--vdd',action="store",type="int",dest="vdd",default=38)
+parser.add_option('--dvdd',action="store",type="int",dest="dvdd",default=38)
+
+
+
 # tests to run
 parser.add_option('--runStressTest', action='store_true', dest='runStressTest', default=False, help='go!')
 parser.add_option('--runExampleTest', action='store_true', dest='runExampleTest', default=False, help='go!')
@@ -75,7 +82,7 @@ if __name__ == '__main__':
     visualizer1 = inputVisualizer( pattern1.getFilename() );
     bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
     
-    vc1 = VipramCom("tmp1",True,options.freq,options.odir);
+    vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
 
     offset = 1;
     # if options.freq == 25: offset = 4;

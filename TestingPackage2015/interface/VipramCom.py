@@ -13,20 +13,24 @@ from pVIPRAM_inputVisualizerClass import *
 
 class VipramCom:
 
-    def __init__(self,name,go=True,freq=100,odir="blah"):
+    def __init__(self,name,go=True,freq=100,odir="blah", vprech=38, vdd=38, dvdd=38):
         
         self._name = name;
         self._go = go;
         self._freq = freq;
         self._odir = odir;
+		
+		self._vprech = vprech;
+		self._vdd = vdd;
+		self._dvdd = dvdd;
 
         self._manager = uhal.ConnectionManager("file://../data/vipram_connections.xml");
         self._hw = self._manager.getDevice("Mezz1")
         uhal.setLogLevelTo( uhal.LogLevel.ERROR )
         #self._hw.dispatch();
-        self._hw.getNode("VipMEM.VPRECH").write(38);
-        self._hw.getNode("VipMEM.VDD").write(38);
-        self._hw.getNode("VipMEM.DVDD").write(38);
+        self._hw.getNode("VipMEM.VPRECH").write(vprech);
+        self._hw.getNode("VipMEM.VDD").write(vdd);
+        self._hw.getNode("VipMEM.DVDD").write(dvdd);
 
         #self._hw.dispatch();
         self._ident = self._hw.getNode("VipMEM.Ident").read();
