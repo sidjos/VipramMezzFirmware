@@ -16,9 +16,9 @@ echo $timestamp |tee -a $log
 
 #freq=20
 stress=1
-vprech=22
-vdd=22
-dvdd=22
+vprech=35
+vdd=35
+dvdd=35
 
 freq_start=50
 freq_step=10
