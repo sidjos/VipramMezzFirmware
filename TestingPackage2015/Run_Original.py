@@ -39,10 +39,13 @@ parser.add_option('--freq',action="store",type="int",dest="freq",default=50)
 parser.add_option('--NStress',action="store",type="int",dest="NStress",default=0)
 
 
+parser.add_option('--load',action="store",type="int",dest="load",default=False)
+parser.add_option('--run',action="store",type="int",dest="run",default=False)
+
+
 parser.add_option('--vprech',action="store",type="int",dest="vprech",default=38)
 parser.add_option('--vdd',action="store",type="int",dest="vdd",default=38)
 parser.add_option('--dvdd',action="store",type="int",dest="dvdd",default=38)
-
 
 
 # tests to run
@@ -69,32 +72,45 @@ if __name__ == '__main__':
     else:
         os.makedirs(options.odir)
 
-    print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
+    print "testing REAL match efficiency at frequency = ",options.freq 
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
     #pattern1 = performance_Test_0("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
     data_match=32767
     data_miss=0
-    pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
-	#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
-
-    visualizer1 = inputVisualizer( pattern1.getFilename() );
-    bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
-    
-    vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
-
-    offset = 1;
-
-    vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
-    vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
-    vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
-
-    time.sleep(1);
-
-    if options.Load: vc1.runPowerTest(bits,1);
-    else: vc1.runPowerTest(bits,1,True,1);
-
-    print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
-    print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
-    print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+	
+	if options.load==True:
+		print "Loading Full Chip..............................."
+		pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
+		#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
+		visualizer1 = inputVisualizer( pattern1.getFilename() );
+		bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
+		vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
+		offset = 1;
+		vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
+		vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
+		vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
+		time.sleep(1);
+		if options.Load: vc1.runPowerTest(bits,1);
+		else: vc1.runPowerTest(bits,1,True,1);
+		print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
+		print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
+		print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+	
+	if options.run==True:
+		print "Run and check mode for Full Chip..............................."
+		pattern1 = performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
+		visualizer1 = inputVisualizer( pattern1.getFilename() );
+		bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
+		vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
+		offset = 1;
+		vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
+		vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
+		vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
+		time.sleep(1);
+		if options.Load: vc1.runPowerTest(bits,1);
+		else: vc1.runPowerTest(bits,1,True,1);
+		print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
+		print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
+		print "len(vc1._i_vdd) = ", len(vc1._i_prech)
 
