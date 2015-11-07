@@ -60,9 +60,8 @@ def exampleTest1(filename):
 	return inputPattern;
 
 	
-	
 
-def performance_Test_0(filename, N, freq, odir, loadMode):
+def performance_test_0_load(filename, freq, data_match, data_miss, odir):
 
 	inputP = inputBuilder(odir + "/" + filename + ".root")
 	inputP.initializeLoadPhase()
@@ -74,12 +73,7 @@ def performance_Test_0(filename, N, freq, odir, loadMode):
 	# mult = (int(sys.argv[3])/10)+1
 	mult = (int(freq)/10)+1;
 
-	print "N% = ", prob, ", Multiplier = ", mult
-
-	# n rows
-	#nrows = 128;
-	nrows = 6;
-	ncols = 32;
+	print "Data ", data, " Multiplier = ", mult
 
 	infoList = [];
 	## ---------------------------------
@@ -88,21 +82,51 @@ def performance_Test_0(filename, N, freq, odir, loadMode):
 	for row in range(0,128):
 		tmpInfoList = [];
 		for col in range(0, 32):
+			inputP.loadSinglePattern(row, col, [data_miss, data_miss, data_miss, data_miss], mult)
+			tmpInfoList.append(0);
+		infoList.append( tmpInfoList );
+
+	inputP.loadSinglePattern(0, 0, [data_match, data_match, data_match, data_match], mult)
+
+	print "done"
+	inputP.close();
+	return inputP;
+
+
+def performance_test_0(filename, freq, data_match, data_miss, odir):
+
+
+	inputP = inputBuilder(odir + "/" + filename + ".root")
+	#inputP.initializeLoadPhase()
+	# N value
+	#prob = int(sys.argv[2]);
+	# frequency
+	# mult = (int(sys.argv[3])/10)+1
+	
+	mult = (int(freq)/10)+1;
+
+	print "data match:", data_match, ",data miss:", data_miss, ", Multiplier = ", mult
+
+	infoList = [];
+	
+	## Load mode
+	print "RUNNING LOAD MODE!!"
+	for row in range(0,128):
+		tmpInfoList = [];
+		for col in range(0, 32):
 			if (random.randint(1, 100) > prob):
-				inputP.loadSinglePattern(row, col, [0, 0, 0, 0], mult)
+				#inputP.loadSinglePattern(row, col, [0, 0, 0, 0], mult)
 				tmpInfoList.append(0);
 			else:
-				inputP.loadSinglePattern(row, col, [32767, 32767, 32767, 32767], mult)
-
+				#inputP.loadSinglePattern(row, col, [32767, 32767, 32767, 32767], mult)
 				tmpInfoList.append(1);
 		infoList.append( tmpInfoList );
 
 	print "RUN LOAD+CHECK MODE!!"
 	inputP.initializeRunPhase([1, 0, 0, 0],22,[16384,16384,16384,16384]);    
 	for i in range(1):
-		# if i % 1000 == 0: print i;
 		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);
-		inputP.checkPattern([32767, 32767, 32767, 32767], 22);
+		inputP.checkPattern([data_match, data_match, data_match, data_match], 22);
 		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);
 		inputP.readOutMode_withDelay(10*mult);
 		inputP.initializeRunPhase([1, 0, 0, 0],22,[16384,16384,16384,16384]);
