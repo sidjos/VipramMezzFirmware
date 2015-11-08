@@ -28,6 +28,7 @@ freq_end=120
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
 do
+echo ""
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
