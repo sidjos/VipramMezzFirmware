@@ -2,7 +2,6 @@
 
 #sidjos@gmail.com, sergo@fnal.gov
 
-echo "clean..." |tee -a $log
 
 log=performance_testing_output_script.log
 
@@ -16,19 +15,19 @@ echo $timestamp |tee -a $log
 
 
 
-vprech=35
-vdd=35
-dvdd=35
+vprech=25
+vdd=25
+dvdd=25
 
-freq_start=100
-freq_step=5
-freq_end=120
+freq_start=61
+freq_step=1
+freq_end=66
 
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
 do
-echo ""
+echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
