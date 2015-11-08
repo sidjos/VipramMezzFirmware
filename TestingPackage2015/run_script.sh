@@ -4,7 +4,7 @@
 
 echo "clean..." |tee -a $log
 
-log=perfofdata_output_script.log
+log=performance_testing_output_script.log
 
 #rm ./$log
 #touch $log
@@ -20,9 +20,9 @@ vprech=35
 vdd=35
 dvdd=35
 
-freq_start=90
-freq_step=10
-freq_end=110
+freq_start=100
+freq_step=5
+freq_end=120
 
 
 sleep 1s

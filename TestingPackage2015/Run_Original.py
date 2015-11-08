@@ -82,10 +82,10 @@ if __name__ == '__main__':
     #print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
-	print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
-	data_match=32767
+    print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
+    data_match=32767
     data_miss=0
-	pattern1 = performance_test_sid("tmp1", options.freq, data_match, data_miss, options.odir)
+    pattern1 = performance_test_sid("tmp1", options.freq, data_match, data_miss, options.odir)
 	
     #pattern1 = exampleTest("tmp1");
     #pattern1  = realisticTest("tmp1",100);
