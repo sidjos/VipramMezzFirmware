@@ -65,6 +65,7 @@ def writeToText(idvdd, ivdd, iprech):
     f.write(str(options.freq) + " " + str(options.NStress) + " " + str(idvdd) + " " + str(ivdd) + " " + str(iprech) + "\n" );
     f.close();
 
+
 if __name__ == '__main__':
 
     if os.path.exists(options.odir):
@@ -72,45 +73,103 @@ if __name__ == '__main__':
     else:
         os.makedirs(options.odir)
 
-    print "testing REAL match efficiency at frequency = ",options.freq 
+    # ------------------------------------------------
+    # ------------------------------------------------
+    # ------------------------------------------------
+    # generate the patterns
+    #pattern1 = stressTest_split("tmp1",options.NStress,options.freq,options.odir,options.Load);
+
+    #print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
-    #pattern1 = performance_Test_0("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
-    data_match=32767
+	print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
+	data_match=32767
     data_miss=0
+	pattern1 = performance_test_sid("tmp1", options.freq, data_match, data_miss, options.odir)
 	
-    if options.load==True:
-	print "Loading Full Chip..............................."
-	pattern1 = performance_test_0_load("tmp1", options.freq, data_match, data_miss, options.odir)
-	#performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
-	visualizer1 = inputVisualizer( pattern1.getFilename() );
-	bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
-	vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
-	offset = 1;
-	vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
-	vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
-	vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
-	time.sleep(1);
-	if options.Load: vc1.runPowerTest(bits,1);
-	else: vc1.runPowerTest(bits,1,True,1);
-	print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
-	print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
-	print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+    #pattern1 = exampleTest("tmp1");
+    #pattern1  = realisticTest("tmp1",100);
 
-    if options.run==True:
-	print "Run and check mode for Full Chip..............................."
-	pattern1 = performance_test_0("tmp1", options.freq, data_match, data_miss, options.odir)
-	visualizer1 = inputVisualizer( pattern1.getFilename() );
-	bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
-	vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
-	offset = 1;
-	vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
-	vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
-	vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
-	time.sleep(1);
-	if options.Load: vc1.runPowerTest(bits,1);
-	else: vc1.runPowerTest(bits,1,True,1);
-	print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
-	print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
-	print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+    visualizer1 = inputVisualizer( pattern1.getFilename() );
+    bits = visualizer1.writeToText( os.path.splitext( pattern1.getFilename() )[0]+"_i.txt", True );
+    
+    vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
 
+    offset = 1;
+	
+    # if options.freq == 25: offset = 4;
+    # if options.freq == 33: offset = 3;
+    # if options.freq == 50: offset = 2;
+    # if options.freq > 50 and options.freq < 99: offset = 2;
+    
+    #vc1.changeClockFrequency("vco",5);
+    vc1.changeClockFrequency("clock0",int(1000/options.freq), 0);
+    vc1.changeClockFrequency("clock1",int(1000/options.freq), 0);
+    vc1.changeClockFrequency("clock2",int(1000/options.freq), offset);
+    #vc1.changeClockFrequency("clock3",100, 0);
+    time.sleep(1);
+
+    ## standard test
+    #vc1.runTest(bits);
+
+    if options.Load: vc1.runPowerTest(bits,1);
+    else: vc1.runPowerTest(bits,1,True,1);
+
+    print "len(vc1._i_dvdd) = ", len(vc1._i_dvdd)
+    print "len(vc1._i_vdd) = ", len(vc1._i_vdd)
+    print "len(vc1._i_vdd) = ", len(vc1._i_prech)
+
+
+    """
+    ###########################################
+    ## plotting 
+    ###########################################
+    if not options.Load: 
+        
+        a_t = array('d', []);
+        a_dvdd = array('d', []);
+        a_vdd  = array('d', []);
+        a_prech= array('d', []);
+        for i in range(len(vc1._i_dvdd)):
+            a_t.append( float(i) );
+            a_dvdd.append( 1.e-6*vc1._i_dvdd[i] );
+            a_vdd.append( 1.e-6*vc1._i_vdd[i] );
+            a_prech.append( 1.e-6*vc1._i_prech[i] );
+        gr_dvdd = TGraph( len(a_t), a_t, a_dvdd );
+        gr_vdd = TGraph( len(a_t), a_t, a_vdd );
+        gr_prech = TGraph( len(a_t), a_t, a_prech );
+        gr_dvdd.SetLineColor(1);
+        gr_vdd.SetLineColor(2);
+        gr_prech.SetLineColor(4);
+        leg = TLegend(0.65,0.25,0.85,0.45);
+        leg.SetFillStyle(1001);
+        leg.SetFillColor(0);    
+        leg.SetBorderSize(1);  
+        leg.AddEntry(gr_dvdd,"I (dvdd)","l");
+        leg.AddEntry(gr_vdd,"I (vdd)","l");
+        leg.AddEntry(gr_prech,"I (prech)","l");
+        c_i = TCanvas( "c_i", "c_i", 1200, 800 );
+        hrl = c_i.DrawFrame(0,1.0e-4,float(len(a_t)),1.0);
+        hrl.GetYaxis().SetTitle("current (A)");
+        hrl.GetXaxis().SetTitle("time (N bursts)");
+        c_i.SetGrid(); 
+        gr_dvdd.Draw("l");
+        gr_vdd.Draw("l");
+        gr_prech.Draw("l");
+        leg.Draw();
+        gPad.SetLogy();
+        c_i.SaveAs(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+".pdf");
+        asize = len(vc1._i_dvdd)-1;
+        writeToText(1.e-6*vc1._i_dvdd[asize],1.e-6*vc1._i_vdd[asize],1.e-6*vc1._i_prech[asize]);
+        difftimes = vc1._difftimes;
+        h_t = TH1F("h_t",";#Delta t (s); N", 100, 0.0000, 0.0005)
+        for i in range(len(difftimes)): h_t.Fill(difftimes[i]);
+        c_t = TCanvas( "c_t", "c_t", 1200, 800 );
+        h_t.Draw("hist");
+        c_t.SaveAs(options.odir+"/timing_NStress"+str(options.NStress)+"_freq"+str(options.freq)+".pdf");
+        ####
+        fout = open(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+".txt",'w');
+        for i in range(len(a_t)):
+            fout.write(str(a_t[i])+" "+str(a_dvdd[i])+" "+str(a_vdd[i])+" "+str(a_prech[i])+"\n");
+        fout.close();
+    """

@@ -4,7 +4,7 @@
 
 echo "clean..." |tee -a $log
 
-log=data_output_script.log
+log=perfofdata_output_script.log
 
 #rm ./$log
 #touch $log
@@ -14,17 +14,16 @@ echo "Starting test..." |tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 
-freqLoad=20
-stress=1
+
+
 vprech=35
 vdd=35
 dvdd=35
 
-freq_start=50
+freq_start=90
 freq_step=10
-freq_end=80
+freq_end=110
 
-python Run_Original.py -b --freq $freqLoad --vprech $vprech --vdd $vdd --dvdd $dvdd --load True --run False| grep 'REAL\|Firmware\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -32,7 +31,7 @@ do
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|Firmware\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 

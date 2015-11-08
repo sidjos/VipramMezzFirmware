@@ -59,52 +59,15 @@ def exampleTest1(filename):
 	inputPattern.close();
 	return inputPattern;
 
-	
 
-def performance_test_0_load(filename, freq, data_match, data_miss, odir):
+def performance_test_sid(filename, freq, data_match, data_miss, odir):
 
 	inputP = inputBuilder(odir + "/" + filename + ".root")
 	inputP.initializeLoadPhase()
-	
-	# N value
-	#prob = int(sys.argv[2]);
-	# frequency
-	# mult = (int(sys.argv[3])/10)+1
+
 	mult = (int(freq)/10)+1;
 
-	print "Data_LOAD ", data_miss, " Multiplier = ", mult
-
-	infoList = [];
-	## ---------------------------------
-	## Load mode
-	print "RUNNING LOAD MODE!!"
-	for row in range(0,128):
-		tmpInfoList = [];
-		for col in range(0, 32):
-			inputP.loadSinglePattern(row, col, [data_miss, data_miss, data_miss, data_miss], mult)
-			tmpInfoList.append(0);
-		infoList.append( tmpInfoList );
-
-	inputP.loadSinglePattern(0, 0, [data_match, data_match, data_match, data_match], mult)
-
-	print "done"
-	inputP.close();
-	return inputP;
-
-
-def performance_test_0(filename, freq, data_match, data_miss, odir):
-
-
-	inputP = inputBuilder(odir + "/" + filename + ".root")
-	#inputP.initializeLoadPhase()
-	# N value
-	#prob = int(sys.argv[2]);
-	# frequency
-	# mult = (int(sys.argv[3])/10)+1
-	
-	mult = (int(freq)/10)+1;
-
-	print "data match:", data_match, ",data miss:", data_miss, ", Multiplier = ", mult
+	print "data match:", data_match, ",data miss:", data_miss, ", Multiplier = ", mult, " freq: ", freq
 
 	infoList = [];
 	
@@ -113,12 +76,12 @@ def performance_test_0(filename, freq, data_match, data_miss, odir):
 	for row in range(0,128):
 		tmpInfoList = [];
 		for col in range(0, 32):
-			if (random.randint(1, 100) > prob):
-				#inputP.loadSinglePattern(row, col, [0, 0, 0, 0], mult)
-				tmpInfoList.append(0);
-			else:
-				#inputP.loadSinglePattern(row, col, [32767, 32767, 32767, 32767], mult)
+			if (row==0 and col == 0):
+				inputP.loadSinglePattern(row, col, [data_match, data_match, data_match, data_match], mult)
 				tmpInfoList.append(1);
+			else:
+				inputP.loadSinglePattern(row, col, [data_miss, data_miss, data_miss, data_miss], mult)
+				tmpInfoList.append(0);
 		infoList.append( tmpInfoList );
 
 	print "RUN LOAD+CHECK MODE!!"
