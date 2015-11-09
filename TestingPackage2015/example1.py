@@ -60,7 +60,7 @@ def exampleTest1(filename):
 	return inputPattern;
 
 
-def performance_test_sid(filename, freq, data_match, data_miss, odir):
+def performance_test_sid(filename, freq, data_match, data_miss, odir, rep):
 
 	inputP = inputBuilder(odir + "/" + filename + ".root")
 	inputP.initializeLoadPhase()
@@ -86,7 +86,7 @@ def performance_test_sid(filename, freq, data_match, data_miss, odir):
 
 	print "RUN LOAD+CHECK MODE!!"
 	inputP.initializeRunPhase([1, 0, 0, 0],22,[16384,16384,16384,16384]);    
-	for i in range(1):
+	for i in range(rep):
 		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);
 		inputP.checkPattern([data_match, data_match, data_match, data_match], 22);
 		for j in range(10): inputP.checkPattern([16384, 16384, 16384, 16384], 22);

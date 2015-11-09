@@ -47,6 +47,7 @@ parser.add_option('--vprech',action="store",type="int",dest="vprech",default=38)
 parser.add_option('--vdd',action="store",type="int",dest="vdd",default=38)
 parser.add_option('--dvdd',action="store",type="int",dest="dvdd",default=38)
 
+parser.add_option('--rep',action="store",type="int",dest="rep",default=1)
 
 # tests to run
 parser.add_option('--runStressTest', action='store_true', dest='runStressTest', default=False, help='go!')
@@ -85,7 +86,7 @@ if __name__ == '__main__':
     print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
     data_match=32767
     data_miss=0
-    pattern1 = performance_test_sid("tmp1", options.freq, data_match, data_miss, options.odir)
+    pattern1 = performance_test_sid("tmp1", options.freq, data_match, data_miss, options.odir, options.rep)
 	
     #pattern1 = exampleTest("tmp1");
     #pattern1  = realisticTest("tmp1",100);

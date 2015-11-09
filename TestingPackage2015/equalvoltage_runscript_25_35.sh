@@ -2,69 +2,31 @@
 
 #sidjos@gmail.com, sergo@fnal.gov
 
+timestamp=$(date +%T)
 
 log=samevoltagelevel_performance_testing_output_script.log
-touch $log
+
+
+if [ -f $log ]; then
+   echo "File '$log' Exists -> creating copy of old file with timestamp appended and creating new log"
+   cp $log copy_$log_$timestamp
+   rm ./$log
+   touch $log
+else
+   echo "The File '$log' Does Not Exist and was created"
+   touch $log
+fi
 
 #rm ./$log
 #touch $log
+
 
 echo "Starting test..." |tee -a $log
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 
-
-
-vprech=26
-vdd=26
-dvdd=26
-
-freq_start=63
-freq_step=2
-freq_end=70
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-echo "...Test End" |tee -a $log
-
-
-
-
-vprech=27
-vdd=27
-dvdd=27
-
-freq_start=64
-freq_step=2
-freq_end=74
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-echo "...Test End" |tee -a $log
-
+rep=5
 
 
 
@@ -83,14 +45,13 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
 done
 
 echo "...Test End" |tee -a $log
-
 
 
 
@@ -109,38 +70,13 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
 done
 
 echo "...Test End" |tee -a $log
-
-
-vprech=30
-vdd=30
-dvdd=30
-
-freq_start=78
-freq_step=2
-freq_end=86
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-echo "...Test End" |tee -a $log
-
 
 
 
@@ -148,7 +84,7 @@ vprech=31
 vdd=31
 dvdd=31
 
-freq_start=80
+freq_start=78
 freq_step=2
 freq_end=90
 
@@ -159,7 +95,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
@@ -168,9 +104,10 @@ done
 echo "...Test End" |tee -a $log
 
 
-vprech=31
-vdd=31
-dvdd=31
+
+vprech=32
+vdd=32
+dvdd=32
 
 freq_start=80
 freq_step=2
@@ -183,31 +120,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-echo "...Test End" |tee -a $log
-
-
-vprech=32
-vdd=32
-dvdd=32
-
-freq_start=82
-freq_step=2
-freq_end=98
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
@@ -223,7 +136,7 @@ dvdd=33
 
 freq_start=86
 freq_step=2
-freq_end=104
+freq_end=98
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -232,7 +145,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
@@ -247,7 +160,7 @@ vprech=34
 vdd=34
 dvdd=34
 
-freq_start=92
+freq_start=84
 freq_step=2
 freq_end=104
 
@@ -258,7 +171,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
@@ -273,9 +186,9 @@ vprech=35
 vdd=35
 dvdd=35
 
-freq_start=100
+freq_start=84
 freq_step=2
-freq_end=106
+freq_end=104
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -284,7 +197,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --load False --run True| grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
