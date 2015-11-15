@@ -35,9 +35,9 @@ vprech=31
 vdd=25
 dvdd=25
 
-freq_start=118
+freq_start=132
 freq_step=2
-freq_end=130
+freq_end=136
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -61,9 +61,9 @@ vprech=32
 vdd=25
 dvdd=25
 
-freq_start=124
+freq_start=140
 freq_step=2
-freq_end=140
+freq_end=146
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -87,9 +87,9 @@ vprech=33
 vdd=25
 dvdd=25
 
-freq_start=130
+freq_start=148
 freq_step=2
-freq_end=148
+freq_end=158
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -112,9 +112,9 @@ vprech=34
 vdd=25
 dvdd=25
 
-freq_start=140
+freq_start=152
 freq_step=2
-freq_end=152
+freq_end=160
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -138,9 +138,9 @@ vprech=35
 vdd=25
 dvdd=25
 
-freq_start=150
+freq_start=170
 freq_step=2
-freq_end=170
+freq_end=190
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
