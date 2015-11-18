@@ -4,7 +4,7 @@
 
 timestamp=$(date +%T)
 
-log=samevoltagelevel_performance_testing_output_script.log
+log=output_samevoltagelevel_performance_testing_output_script.log
 
 
 if [ -f $log ]; then

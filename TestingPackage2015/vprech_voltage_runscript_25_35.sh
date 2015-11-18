@@ -4,7 +4,7 @@
 
 timestamp=$(date +%T)
 
-log=vprech_voltagelevel_performance_testing_output_script.log
+log=output_vprech_voltagelevel_performance_testing_output_script.log
 
 
 if [ -f $log ]; then
