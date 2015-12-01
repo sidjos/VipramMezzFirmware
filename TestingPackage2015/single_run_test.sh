@@ -9,7 +9,7 @@ log=output_single_run_test.log
 
 if [ -f $log ]; then
    echo "File '$log' Exists -> creating copy of old file with timestamp appended and creating new log"
-   cp $log copy_$log_$timestamp
+   cp $log copy_output_single_run_test_$timestamp
    rm $log
    touch $log
 else
@@ -28,11 +28,11 @@ echo $timestamp |tee -a $log
 
 rep=5
 
-vprech=33
+vprech=34
 vdd=25
 dvdd=25
 
-freq=163
+freq=165
 
 
 echo "" | tee -a $log
