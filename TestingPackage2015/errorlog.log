@@ -1,0 +1,21 @@
+    + Node "Out30", INCREMENTAL block, Size 1024, Addresses [0x0019E000-0019E3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/./data/vipram_address.xml"
+    + Node "Out31", INCREMENTAL block, Size 1024, Addresses [0x0019F000-0019F3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/./data/vipram_address.xml"
+  + Node "ram", INCREMENTAL block, Size 256, Addresses [0x00001000-000010FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/./data/vipram_address.xml"
+16-12-15 05:20:53.0E2045 [0x35d8400] INFO - URI "ipbusudp-2.0://192.168.0.131:50001" parsed as:
+ > protocol : ipbusudp-2.0
+ > hostname : 192.168.0.131
+ > port : 50001
+ > path :
+ > extension :
+ > arguments :
+
+16-12-15 05:20:54.0E257D [0x37afb30] ERROR - Timeout (1000 milliseconds) occurred for UDP receive from target with URI: ipbusudp-2.0://192.168.0.131:50001
+Traceback (most recent call last):
+  File "Run_Original.py", line 97, in <module>
+    vc1 = VipramCom("tmp1",True,options.freq,options.odir, options.vprech, options.vdd, options.dvdd);
+  File "./interface/VipramCom.py", line 48, in __init__
+    self._hw.dispatch();
+uhal._core.UdpTimeout: Timeout (1000 milliseconds) occurred for UDP receive from target with URI: ipbusudp-2.0://192.168.0.131:50001
+
+05:20:55
+
