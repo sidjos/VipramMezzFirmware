@@ -26,7 +26,7 @@ echo "Starting $log test..." |tee -a $log
 timestamp=$(date)
 echo $timestamp |tee -a $log
 
-rep=50
+rep=5
 
 
 vprech=30
