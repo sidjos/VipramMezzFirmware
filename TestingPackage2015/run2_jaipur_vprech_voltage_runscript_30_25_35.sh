@@ -21,21 +21,24 @@ fi
 #touch $log
 
 
-echo "Starting vprech_voltagelevel_performance_testing_output test..." |tee -a $log
+echo "Starting run2_vprech_voltagelevel_performance_testing_output test..." |tee -a $log
 
-timestamp=$(date +%T)
+timestamp=$(date)
 echo $timestamp |tee -a $log
 
-rep=50
+rep=5
 
 
-vprech=30
+
+
+
+vprech=25
 vdd=30
 dvdd=30
 
-freq_start=79
-freq_step=1
-freq_end=83
+freq_start=50
+freq_step=4
+freq_end=70
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -51,6 +54,65 @@ sleep 1s
 done
 
 echo "...Test End" |tee -a $log
+
+
+
+
+
+
+
+vprech=27
+vdd=30
+dvdd=30
+
+freq_start=55
+freq_step=4
+freq_end=75
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+echo "...Test End" |tee -a $log
+
+
+
+
+
+
+vprech=30
+vdd=30
+dvdd=30
+
+freq_start=76
+freq_step=4
+freq_end=88
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd"
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded' | tee  -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+echo "...Test End" |tee -a $log
+
+
 
 
 
