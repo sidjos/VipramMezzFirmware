@@ -1,0 +1,318 @@
+Starting run2_vprech_voltagelevel_performance_testing_output test...
+Fri Jan 1 14:50:12 CST 2016
+
+14:50:13
+[?1034h---> performance testing REAL match efficiency at frequency =  68  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4782
+Vdd bit =  35 , Vdd measured =  4765 Dvdd bit =  35 , Dvdd measured =  4766
+memoryBlocksNeeded =  11
+REAL test results: match efficiency =  0 / 1  =  0.0 %
+REAL test results: match efficiency =  1 / 5  =  20.0 %
+REAL test results: match efficiency =  1 / 5  =  20.0 %
+14:57:27
+
+14:57:28
+[?1034h---> performance testing REAL match efficiency at frequency =  70  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4429
+Vdd bit =  35 , Vdd measured =  4782 Dvdd bit =  35 , Dvdd measured =  4773
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  1 / 4  =  25.0 %
+REAL test results: match efficiency =  1 / 5  =  20.0 %
+15:05:31
+
+15:05:32
+[?1034h---> performance testing REAL match efficiency at frequency =  72  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4429
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4773
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+15:13:34
+
+15:13:35
+[?1034h---> performance testing REAL match efficiency at frequency =  74  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4428
+Vdd bit =  35 , Vdd measured =  4782 Dvdd bit =  35 , Dvdd measured =  4771
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+15:21:42
+
+15:21:43
+[?1034h---> performance testing REAL match efficiency at frequency =  76  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4429
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4771
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+15:29:50
+
+15:29:51
+[?1034h---> performance testing REAL match efficiency at frequency =  78  and voltages(vprech, vdd, vdd):  30 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4429
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4770
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+15:37:54
+...Test End
+
+15:37:56
+[?1034h---> performance testing REAL match efficiency at frequency =  70  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4430
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4766
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  4 / 4  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+15:46:04
+
+15:46:05
+[?1034h---> performance testing REAL match efficiency at frequency =  72  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4500
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4772
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  2 / 4  =  50.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+15:54:10
+
+15:54:11
+[?1034h---> performance testing REAL match efficiency at frequency =  74  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4500
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4769
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  1 / 4  =  25.0 %
+REAL test results: match efficiency =  2 / 5  =  40.0 %
+16:02:13
+
+16:02:14
+[?1034h---> performance testing REAL match efficiency at frequency =  76  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4500
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4769
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  3 / 4  =  75.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+16:10:16
+
+16:10:17
+[?1034h---> performance testing REAL match efficiency at frequency =  78  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4500
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4770
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+16:18:19
+
+16:18:20
+[?1034h---> performance testing REAL match efficiency at frequency =  80  and voltages(vprech, vdd, vdd):  31 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4499
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4767
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+16:27:27
+...Test End
+
+16:27:29
+[?1034h---> performance testing REAL match efficiency at frequency =  76  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4499
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  4 / 4  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+16:35:32
+
+16:35:33
+[?1034h---> performance testing REAL match efficiency at frequency =  78  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4571
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+16:43:43
+
+16:43:44
+[?1034h---> performance testing REAL match efficiency at frequency =  80  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4572
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4767
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  2 / 3  =  66.6666666667 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+16:52:57
+
+16:52:58
+[?1034h---> performance testing REAL match efficiency at frequency =  82  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4571
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4767
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  1 / 5  =  20.0 %
+REAL test results: match efficiency =  1 / 5  =  20.0 %
+17:02:06
+
+17:02:07
+[?1034h---> performance testing REAL match efficiency at frequency =  84  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4571
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4767
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+17:11:13
+
+17:11:14
+[?1034h---> performance testing REAL match efficiency at frequency =  86  and voltages(vprech, vdd, vdd):  32 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4571
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+17:20:23
+...Test End
+
+17:20:25
+[?1034h---> performance testing REAL match efficiency at frequency =  78  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4571
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  12
+REAL test results: match efficiency =  2 / 4  =  50.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+17:28:34
+
+17:28:35
+[?1034h---> performance testing REAL match efficiency at frequency =  80  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4642
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4767
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  3 / 3  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+17:37:44
+
+17:37:45
+[?1034h---> performance testing REAL match efficiency at frequency =  82  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4642
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  3 / 3  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+17:46:56
+
+17:46:57
+[?1034h---> performance testing REAL match efficiency at frequency =  84  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4643
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+17:55:53
+
+17:55:54
+[?1034h---> performance testing REAL match efficiency at frequency =  86  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4642
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+18:05:09
+
+18:05:10
+[?1034h---> performance testing REAL match efficiency at frequency =  88  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4642
+Vdd bit =  35 , Vdd measured =  4783 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  14
+REAL test results: match efficiency =  0 / 3  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+18:14:22
+
+18:14:23
+[?1034h---> performance testing REAL match efficiency at frequency =  90  and voltages(vprech, vdd, vdd):  33 35 35
+------------------------
+-----> written to output/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4642
+Vdd bit =  35 , Vdd measured =  4784 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  15
+REAL test results: match efficiency =  0 / 2  =  0.0 %
+REAL test results: match efficiency =  0 / 4  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+18:24:34
+...Test End
