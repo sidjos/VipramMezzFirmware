@@ -12,11 +12,10 @@ echo "Starting test..." |tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 
-python RunPower.py -b --freq 50 --NStress 10 --odir /home/sidjoshi/sergo_test_setup/VIPRAM_testing/TestingPackage/sid_output/ |tee -a $log
+python RunPower.py -b --freq 50 --NStress 10 --odir /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/ |tee -a $log
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-sleep 1s 
-done
 
 echo "...Test End" |tee -a $log
+
