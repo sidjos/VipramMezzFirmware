@@ -1,0 +1,272 @@
+Starting test...
+19:36:55
+19:36:55
+Starting test...
+19:38:08
+[?1034hN% =  10 , Multiplier =  6
+RUNNING LOAD MODE!!
+RUN LOAD+CHECK MODE!!
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+10000
+done
+------------------------
+-----> written to /home/sidjoshi/sergo_test_setup/VIPRAM_testing/TestingPackage/sid_output//tmp1_i.txt
+Writing out, cycle, processed:  0.0 %
+Writing out, cycle, processed:  3.12 %
+Writing out, cycle, processed:  6.23 %
+Writing out, cycle, processed:  9.35 %
+Writing out, cycle, processed:  12.46 %
+Writing out, cycle, processed:  15.58 %
+Writing out, cycle, processed:  18.69 %
+Writing out, cycle, processed:  21.81 %
+Writing out, cycle, processed:  24.92 %
+Writing out, cycle, processed:  28.04 %
+Writing out, cycle, processed:  31.15 %
+Writing out, cycle, processed:  34.27 %
+Writing out, cycle, processed:  37.38 %
+Writing out, cycle, processed:  40.5 %
+Writing out, cycle, processed:  43.61 %
+Writing out, cycle, processed:  46.73 %
+Writing out, cycle, processed:  49.84 %
+Writing out, cycle, processed:  52.96 %
+Writing out, cycle, processed:  56.07 %
+Writing out, cycle, processed:  59.19 %
+Writing out, cycle, processed:  62.3 %
+Writing out, cycle, processed:  65.42 %
+Writing out, cycle, processed:  68.53 %
+Writing out, cycle, processed:  71.65 %
+Writing out, cycle, processed:  74.76 %
+Writing out, cycle, processed:  77.88 %
+Writing out, cycle, processed:  80.99 %
+Writing out, cycle, processed:  84.11 %
+Writing out, cycle, processed:  87.22 %
+Writing out, cycle, processed:  90.34 %
+Writing out, cycle, processed:  93.46 %
+Writing out, cycle, processed:  96.57 %
+Writing out, cycle, processed:  99.69 %
+------------------------
+[0;36m24-01-16 19:41:31.899285 [0x2ab0d70] INFO - XML file[0m
+[0;36m24-01-16 19:41:31.900723 [0x2ab0d70] INFO - ConnectionManager created node tree: 
++ Node "", Address 0x00000000, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+  + Node "VipMEM", Address 0x00100000, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Status", SINGLE register, Address 0x00100000, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Go", SINGLE register, Address 0x00100001, Mask 0xFFFFFFFF, Permissions -w, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "FWver", SINGLE register, Address 0x00100002, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Ident", SINGLE register, Address 0x00100003, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "TestReg", SINGLE register, Address 0x00100004, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "DVDD", SINGLE register, Address 0x00100100, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "V_DVDD", SINGLE register, Address 0x00100101, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "I_DVDD", SINGLE register, Address 0x00100102, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "VDD", SINGLE register, Address 0x00100103, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "V_VDD", SINGLE register, Address 0x00100104, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "I_VDD", SINGLE register, Address 0x00100105, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "VPRECH", SINGLE register, Address 0x00100106, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "V_VPRECH", SINGLE register, Address 0x00100107, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "I_VPRECH", SINGLE register, Address 0x00100108, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Temperature", SINGLE register, Address 0x00100109, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "V_VCC3V3", SINGLE register, Address 0x0010010A, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "LTC2991", SINGLE register, Address 0x0010010B, Mask 0xFFFFFFFF, Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKFBOUT_1", SINGLE register, Address 0x00100214, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKFBOUT_2", SINGLE register, Address 0x00100215, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT0_1", SINGLE register, Address 0x00100208, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT0_2", SINGLE register, Address 0x00100209, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT1_1", SINGLE register, Address 0x0010020A, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT1_2", SINGLE register, Address 0x0010020B, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT2_1", SINGLE register, Address 0x0010020C, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT2_2", SINGLE register, Address 0x0010020D, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT3_1", SINGLE register, Address 0x0010020E, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKOUT3_2", SINGLE register, Address 0x0010020F, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CLKPOWER", SINGLE register, Address 0x00100228, Mask 0xFFFFFFFF, Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A0", INCREMENTAL block, Size 1024, Addresses [0x00101000-001013FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A1", INCREMENTAL block, Size 1024, Addresses [0x00102000-001023FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A2", INCREMENTAL block, Size 1024, Addresses [0x00103000-001033FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A3", INCREMENTAL block, Size 1024, Addresses [0x00104000-001043FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A4", INCREMENTAL block, Size 1024, Addresses [0x00105000-001053FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A5", INCREMENTAL block, Size 1024, Addresses [0x00106000-001063FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A6", INCREMENTAL block, Size 1024, Addresses [0x00107000-001073FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A7", INCREMENTAL block, Size 1024, Addresses [0x00108000-001083FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A8", INCREMENTAL block, Size 1024, Addresses [0x00109000-001093FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A9", INCREMENTAL block, Size 1024, Addresses [0x0010A000-0010A3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A10", INCREMENTAL block, Size 1024, Addresses [0x0010B000-0010B3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A11", INCREMENTAL block, Size 1024, Addresses [0x0010C000-0010C3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A12", INCREMENTAL block, Size 1024, Addresses [0x0010D000-0010D3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A13", INCREMENTAL block, Size 1024, Addresses [0x0010E000-0010E3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A14", INCREMENTAL block, Size 1024, Addresses [0x0010F000-0010F3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "A15", INCREMENTAL block, Size 1024, Addresses [0x00110000-001103FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B0", INCREMENTAL block, Size 1024, Addresses [0x00111000-001113FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B1", INCREMENTAL block, Size 1024, Addresses [0x00112000-001123FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B2", INCREMENTAL block, Size 1024, Addresses [0x00113000-001133FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B3", INCREMENTAL block, Size 1024, Addresses [0x00114000-001143FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B4", INCREMENTAL block, Size 1024, Addresses [0x00115000-001153FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B5", INCREMENTAL block, Size 1024, Addresses [0x00116000-001163FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B6", INCREMENTAL block, Size 1024, Addresses [0x00117000-001173FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B7", INCREMENTAL block, Size 1024, Addresses [0x00118000-001183FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B8", INCREMENTAL block, Size 1024, Addresses [0x00119000-001193FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B9", INCREMENTAL block, Size 1024, Addresses [0x0011A000-0011A3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B10", INCREMENTAL block, Size 1024, Addresses [0x0011B000-0011B3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B11", INCREMENTAL block, Size 1024, Addresses [0x0011C000-0011C3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B12", INCREMENTAL block, Size 1024, Addresses [0x0011D000-0011D3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B13", INCREMENTAL block, Size 1024, Addresses [0x0011E000-0011E3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B14", INCREMENTAL block, Size 1024, Addresses [0x0011F000-0011F3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "B15", INCREMENTAL block, Size 1024, Addresses [0x00120000-001203FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C0", INCREMENTAL block, Size 1024, Addresses [0x00121000-001213FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C1", INCREMENTAL block, Size 1024, Addresses [0x00122000-001223FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C2", INCREMENTAL block, Size 1024, Addresses [0x00123000-001233FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C3", INCREMENTAL block, Size 1024, Addresses [0x00124000-001243FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C4", INCREMENTAL block, Size 1024, Addresses [0x00125000-001253FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C5", INCREMENTAL block, Size 1024, Addresses [0x00126000-001263FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C6", INCREMENTAL block, Size 1024, Addresses [0x00127000-001273FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C7", INCREMENTAL block, Size 1024, Addresses [0x00128000-001283FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C8", INCREMENTAL block, Size 1024, Addresses [0x00129000-001293FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C9", INCREMENTAL block, Size 1024, Addresses [0x0012A000-0012A3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C10", INCREMENTAL block, Size 1024, Addresses [0x0012B000-0012B3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C11", INCREMENTAL block, Size 1024, Addresses [0x0012C000-0012C3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C12", INCREMENTAL block, Size 1024, Addresses [0x0012D000-0012D3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C13", INCREMENTAL block, Size 1024, Addresses [0x0012E000-0012E3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C14", INCREMENTAL block, Size 1024, Addresses [0x0012F000-0012F3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "C15", INCREMENTAL block, Size 1024, Addresses [0x00130000-001303FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D0", INCREMENTAL block, Size 1024, Addresses [0x00131000-001313FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D1", INCREMENTAL block, Size 1024, Addresses [0x00132000-001323FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D2", INCREMENTAL block, Size 1024, Addresses [0x00133000-001333FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D3", INCREMENTAL block, Size 1024, Addresses [0x00134000-001343FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D4", INCREMENTAL block, Size 1024, Addresses [0x00135000-001353FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D5", INCREMENTAL block, Size 1024, Addresses [0x00136000-001363FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D6", INCREMENTAL block, Size 1024, Addresses [0x00137000-001373FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D7", INCREMENTAL block, Size 1024, Addresses [0x00138000-001383FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D8", INCREMENTAL block, Size 1024, Addresses [0x00139000-001393FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D9", INCREMENTAL block, Size 1024, Addresses [0x0013A000-0013A3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D10", INCREMENTAL block, Size 1024, Addresses [0x0013B000-0013B3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D11", INCREMENTAL block, Size 1024, Addresses [0x0013C000-0013C3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D12", INCREMENTAL block, Size 1024, Addresses [0x0013D000-0013D3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D13", INCREMENTAL block, Size 1024, Addresses [0x0013E000-0013E3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D14", INCREMENTAL block, Size 1024, Addresses [0x0013F000-0013F3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "D15", INCREMENTAL block, Size 1024, Addresses [0x00140000-001403FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA0", INCREMENTAL block, Size 1024, Addresses [0x00141000-001413FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA1", INCREMENTAL block, Size 1024, Addresses [0x00142000-001423FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA2", INCREMENTAL block, Size 1024, Addresses [0x00143000-001433FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA3", INCREMENTAL block, Size 1024, Addresses [0x00144000-001443FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA4", INCREMENTAL block, Size 1024, Addresses [0x00145000-001453FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA5", INCREMENTAL block, Size 1024, Addresses [0x00146000-001463FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RA6", INCREMENTAL block, Size 1024, Addresses [0x00147000-001473FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CA0", INCREMENTAL block, Size 1024, Addresses [0x00148000-001483FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CA1", INCREMENTAL block, Size 1024, Addresses [0x00149000-001493FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CA2", INCREMENTAL block, Size 1024, Addresses [0x0014A000-0014A3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CA3", INCREMENTAL block, Size 1024, Addresses [0x0014B000-0014B3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "CA4", INCREMENTAL block, Size 1024, Addresses [0x0014C000-0014C3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Miss0", INCREMENTAL block, Size 1024, Addresses [0x0014D000-0014D3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Miss1", INCREMENTAL block, Size 1024, Addresses [0x0014E000-0014E3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Miss2", INCREMENTAL block, Size 1024, Addresses [0x0014F000-0014F3FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "ReqL0", INCREMENTAL block, Size 1024, Addresses [0x00153000-001533FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Latch", INCREMENTAL block, Size 1024, Addresses [0x00150000-001503FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "EvRearm", INCREMENTAL block, Size 1024, Addresses [0x00151000-001513FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "RunMode", INCREMENTAL block, Size 1024, Addresses [0x00152000-001523FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Primary", INCREMENTAL block, Size 1024, Addresses [0x00154000-001543FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out0", INCREMENTAL block, Size 1024, Addresses [0x00180000-001803FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out1", INCREMENTAL block, Size 1024, Addresses [0x00181000-001813FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out2", INCREMENTAL block, Size 1024, Addresses [0x00182000-001823FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out3", INCREMENTAL block, Size 1024, Addresses [0x00183000-001833FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out4", INCREMENTAL block, Size 1024, Addresses [0x00184000-001843FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out5", INCREMENTAL block, Size 1024, Addresses [0x00185000-001853FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out6", INCREMENTAL block, Size 1024, Addresses [0x00186000-001863FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out7", INCREMENTAL block, Size 1024, Addresses [0x00187000-001873FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out8", INCREMENTAL block, Size 1024, Addresses [0x00188000-001883FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out9", INCREMENTAL block, Size 1024, Addresses [0x00189000-001893FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out10", INCREMENTAL block, Size 1024, Addresses [0x0018A000-0018A3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out11", INCREMENTAL block, Size 1024, Addresses [0x0018B000-0018B3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out12", INCREMENTAL block, Size 1024, Addresses [0x0018C000-0018C3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out13", INCREMENTAL block, Size 1024, Addresses [0x0018D000-0018D3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out14", INCREMENTAL block, Size 1024, Addresses [0x0018E000-0018E3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out15", INCREMENTAL block, Size 1024, Addresses [0x0018F000-0018F3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out16", INCREMENTAL block, Size 1024, Addresses [0x00190000-001903FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out17", INCREMENTAL block, Size 1024, Addresses [0x00191000-001913FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out18", INCREMENTAL block, Size 1024, Addresses [0x00192000-001923FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out19", INCREMENTAL block, Size 1024, Addresses [0x00193000-001933FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out20", INCREMENTAL block, Size 1024, Addresses [0x00194000-001943FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out21", INCREMENTAL block, Size 1024, Addresses [0x00195000-001953FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out22", INCREMENTAL block, Size 1024, Addresses [0x00196000-001963FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out23", INCREMENTAL block, Size 1024, Addresses [0x00197000-001973FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out24", INCREMENTAL block, Size 1024, Addresses [0x00198000-001983FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out25", INCREMENTAL block, Size 1024, Addresses [0x00199000-001993FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out26", INCREMENTAL block, Size 1024, Addresses [0x0019A000-0019A3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out27", INCREMENTAL block, Size 1024, Addresses [0x0019B000-0019B3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out28", INCREMENTAL block, Size 1024, Addresses [0x0019C000-0019C3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out29", INCREMENTAL block, Size 1024, Addresses [0x0019D000-0019D3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out30", INCREMENTAL block, Size 1024, Addresses [0x0019E000-0019E3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+    + Node "Out31", INCREMENTAL block, Size 1024, Addresses [0x0019F000-0019F3FF], Permissions r-, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"
+  + Node "ram", INCREMENTAL block, Size 256, Addresses [0x00001000-000010FF], Permissions rw, Module "/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/scripts/../data/vipram_address.xml"[0m
+[0;36m24-01-16 19:41:31.0DBF91 [0x2ab0d70] INFO - URI "ipbusudp-2.0://192.168.0.131:50001" parsed as:
+ > protocol : ipbusudp-2.0
+ > hostname : 192.168.0.131
+ > port : 50001
+ > path : 
+ > extension : 
+ > arguments :
+[0m
+Firmware identity =  0xdeadbeef , firmware version =  1
+registers size =  117
+10   10   0
+clockStatus =  10000000000000000000000000000000
+CLKPOWER = 00000000000000001111111111111111
+Clock: clock0 00000000000000000001001010001010  gets replaced by  00000000000000000001001010001010
+Clock: clock0 00000000000000000000000000000000  gets replaced by  00000000000000000000000000000000
+Writing to clock0
+After transaction: clock0
+Reg1: 00000000000000000001001010001010
+Reg2: 00000000000000000000000000000000
+clockStatus =  00000000000000000000000000000001
+clockStatus after clock change=  10000000000000000000000000000000
+10   10   0
+clockStatus =  10000000000000000000000000000000
+CLKPOWER = 00000000000000001111111111111111
+Clock: clock1 00000000000000000001001010001010  gets replaced by  00000000000000000001001010001010
+Clock: clock1 00000000000000000000000000000000  gets replaced by  00000000000000000000000000000000
+Writing to clock1
+After transaction: clock1
+Reg1: 00000000000000000001001010001010
+Reg2: 00000000000000000000000000000000
+clockStatus =  00000000000000000000000000000001
+clockStatus after clock change=  10000000000000000000000000000000
+10   10   0
+clockStatus =  10000000000000000000000000000000
+CLKPOWER = 00000000000000001111111111111111
+Clock: clock2 00000000000000000001001010001010  gets replaced by  00000000000000000001001010001010
+Clock: clock2 00000000000000000000000000000001  gets replaced by  00000000000000000000000000000001
+Writing to clock2
+After transaction: clock2
+Reg1: 00000000000000000001001010001010
+Reg2: 00000000000000000000000000000001
+clockStatus =  00000000000000000000000000000001
+clockStatus after clock change=  10000000000000000000000000000000
+list1 lenghth =  32101  and bits length =  32101
+memoryBlocksNeeded =  1
+[VipramCom: runTest] On memory block  0
+total time slices =  32101
+[VipramCom:sendInstructions] Translating instructions...
+[VipramCom:sendInstructions] Writing instructions to registers...
+total time slices written out =  32601
+[VipramCom:retrieveRegisters] Getting registers...
+[VipramCom:retrieveRegisters] Write out to file...
+Processed  0.0 % of the blocks
+Processed  9.77 % of the blocks
+Processed  19.53 % of the blocks
+Processed  29.3 % of the blocks
+Processed  39.06 % of the blocks
+Processed  48.83 % of the blocks
+Processed  58.59 % of the blocks
+Processed  68.36 % of the blocks
+Processed  78.13 % of the blocks
+Processed  87.89 % of the blocks
+Processed  97.66 % of the blocks
+len(vc1._i_dvdd) =  50000
+len(vc1._i_vdd) =  50000
+len(vc1._i_vdd) =  50000
+19:42:28
