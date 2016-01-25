@@ -58,10 +58,9 @@ python RunPower.py -b --freq $frequency --NStress $stress --odir $output_dir |te
 timestamp=$(date +%y_%m_%d_%T)
 echo $timestamp |tee -a $log
 
-
-
 mv $log $output_dir
 mv results_Match_DVDD_v5.txt $output_dir
+
 
 echo "...Test End" |tee -a $log
 
