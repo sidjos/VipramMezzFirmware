@@ -2,7 +2,7 @@
 
 #sidjos@gmail.com, sergo@fnal.gov
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 
 log=log_RUN_POWER_TEST_sid.log
 
@@ -20,7 +20,7 @@ fi
 output_dir=/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_$timestamp
 mkdir $output_dir
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
 
 
@@ -35,13 +35,13 @@ echo "Starting test..." |tee -a $log
 frequency=50
 stress=10
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $frequency and stress $stress"
 
 python RunPower.py -b --freq $frequency --NStress $stress --odir $output_dir |tee -a $log
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
 
 
@@ -49,13 +49,13 @@ echo $timestamp |tee -a $log
 frequency=50
 stress=20
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $frequency and stress $stress"
 
 python RunPower.py -b --freq $frequency --NStress $stress --odir $output_dir |tee -a $log
 
-timestamp=$(date +%y_%m_%d_%T)
+timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
 
 
