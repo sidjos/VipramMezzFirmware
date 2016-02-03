@@ -4,7 +4,7 @@
 timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 
 log=log_RUN_POWER_TEST_sid.log
-output_dir=/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/output/
+output_dir=/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage_2016/output/
 
 if [ -f $log ]; then
    echo "File '$log' Exists -> creating copy of old file with timestamp appended and creating new log"

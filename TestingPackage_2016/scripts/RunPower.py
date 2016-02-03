@@ -127,13 +127,13 @@ if __name__ == '__main__':
             a_prech.append( 1.e-6*vc1._i_prech[i] );
 		
 
-        print "--average stable dvdd current = ", a_dvdd[-5:], a_dvdd[0:5]
-        print "--average stable vdd current = ", a_vdd[-5:], a_vdd[0:5]
-        print "--average stable vprech current = ", a_prech[-5:], a_prech[0:5]
+        #print "--average stable dvdd current = ", a_dvdd[-5:], a_dvdd[0:5]
+        #print "--average stable vdd current = ", a_vdd[-5:], a_vdd[0:5]
+        #print "--average stable vprech current = ", a_prech[-5:], a_prech[0:5]
 
-	print "--average stable dvdd current = ", sum(a_dvdd[:int(len(vc1._i_dvdd)/5)])/(int(len(vc1._i_dvdd)))
-	print "--average stable vdd current = ", sum(a_vdd[:int(len(vc1._i_dvdd)/5)])/(int(len(vc1._i_dvdd)))
-	print "--average stable vprech current = ", sum(a_prech[:int(len(vc1._i_dvdd)/5)])/(int(len(vc1._i_dvdd)))
+	print "--average stable dvdd current = ", sum(a_dvdd[-int(len(vc1._i_dvdd)/5):])/(int(len(vc1._i_dvdd)/5))
+	print "--average stable vdd current = ", sum(a_vdd[-int(len(vc1._i_dvdd)/5):])/(int(len(vc1._i_dvdd)/5))
+	print "--average stable vprech current = ", sum(a_prech[-int(len(vc1._i_dvdd)/5):])/(int(len(vc1._i_dvdd)/5))
 
         gr_dvdd = TGraph( len(a_t), a_t, a_dvdd );
         gr_vdd = TGraph( len(a_t), a_t, a_vdd );

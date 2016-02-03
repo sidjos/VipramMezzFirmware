@@ -88,7 +88,7 @@ class VipramCom:
         self._i_prech = [];
         self._difftimes = [];
 
-   def runPowerTest(self, bits, cycles, isPower = False, nPowerCycles = 1, reset=False):
+    def runPowerTest(self, bits, cycles, isPower = False, nPowerCycles = 1, reset=False):
 
         self._instructions = bits;
         self._matchCtr = 0;
