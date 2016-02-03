@@ -88,58 +88,14 @@ class VipramCom:
         self._i_prech = [];
         self._difftimes = [];
 
-    def runTest(self, bits, reset=False):
+   def runPowerTest(self, bits, cycles, isPower = False, nPowerCycles = 1, reset=False):
 
         self._instructions = bits;
         self._matchCtr = 0;
         self._checkDataDtr = 0;
-        self.denom = 0;
-        self.numer = 0;
 
-        self._currentMemoryBlock = 0;
-        curbits = [];
 
-        # input text file
-        f1 = open(self._odir+'/'+self._name+'_i.txt','r');
-        list1 = f1.read().split()
 
-        print "list1 lenghth = ", len(list1), " and bits length = ", len(bits)
-
-        memoryBlocksNeeded = len(bits)/(1024*32) + 1;
-        print "memoryBlocksNeeded = ",memoryBlocksNeeded
-        outputfiles = [];
-        for i in range(memoryBlocksNeeded):
-            fno = self._odir+'/'+self._name+"_tmpi_"+str(i)+".txt";
-            if os.path.exists(fno):
-                os.remove(fno)
-            outputfiles.append( open(fno,'w') ); 
-
-        for i in range(len(bits)):
-            curbits.append(bits[i]);
-            #print i
-            outputfiles[self._currentMemoryBlock].write( list1[i]+'\n' );
-
-            if (((i+1) % (1024*32) == 0) and (i > 0)) or (i == len(bits)-1):
-                print "[VipramCom: runTest] On memory block ",str(self._currentMemoryBlock);
-                self.sendInstructions(curbits,reset);
-                self.retrieveRegisters(curbits);
-
-                outputfiles[self._currentMemoryBlock].close();
-
-                self.compareOutput(); ## how to do the comparison, make internal txt files?
-                    
-                curbits[:] = []; #clear the list
-                self._currentMemoryBlock += 1;
-
-                if reset: break;
-
-    def runPowerTest(self, bits, cycles, isPower = False, nPowerCycles = 1, reset=False):
-
-        self._instructions = bits;
-        self._matchCtr = 0;
-        self._checkDataDtr = 0;
-        self.denom = 0;
-        self.numer = 0;
 
         self._currentMemoryBlock = 0;
         curbits = [];
@@ -173,7 +129,7 @@ class VipramCom:
 
                     outputfiles[self._currentMemoryBlock].close();                    
 
-                    self.compareOutput(); ## how to do the comparison, make internal txt files?
+
 
                     curbits[:] = []; #clear the list
                     self._currentMemoryBlock += 1;
@@ -245,21 +201,23 @@ class VipramCom:
 
 
 
-            self._hw.getNode("VipMEM.Go").write(0x1);
-            self._hw.dispatch();
 
-            ##curtime = -99
-            ##prevtime = -999.;
+
+
+            curtime = -99
+            prevtime = -999.;
             for a in range(nPowerCycles):
-              ##  prevtime = curtime;
-               ## curtime = time.time()
-                ##difftime = curtime - prevtime;
+                self._hw.getNode("VipMEM.Go").write(1);
+                self._hw.dispatch();
+                prevtime = curtime;
+                curtime = time.time()
+                difftime = curtime - prevtime;
                     
-               ## sleeptime = 0;
-                ##if lengthOfBurst > difftime: 
-                  ##  sleeptime = lengthOfBurst - difftime + 0.00005;
-                    ##time.sleep(sleeptime);
-                ##if a > 0: self._difftimes.append(sleeptime);
+                sleeptime = 0;
+                if lengthOfBurst > difftime: 
+                    sleeptime = lengthOfBurst - difftime + 0.00005;
+                    time.sleep(sleeptime);
+                if a > 0: self._difftimes.append(sleeptime);
                 #print "difftime = %.20f" % difftime;
 
 
@@ -310,8 +268,8 @@ class VipramCom:
                 ################
 
         # wait before trying to do any retrieving...
-            self._hw.getNode("VipMEM.Go").write(0x0);
-            self._hw.dispatch();
+
+
         time.sleep(0.1);    
 
     def retrieveRegisters(self,curbits):
@@ -347,10 +305,11 @@ class VipramCom:
         print "[VipramCom:retrieveRegisters] Write out to file..."
         for a in range(blockSize):
 
-            if(i % (1 * blockSize/100) == 0):
-                sys.stdout.write("\r[" + "="*int(20*i/blockSize) + " " + str(round(100.*i/blockSize,0)) + "% done");
-                sys.stdout.flush();
 
+
+
+
+            if a%100 == 0: print "Processed ", round(float(a)*100./float(blockSize),2), "% of the blocks";
         #for a in range(blockSize):
             #if a < 1010: break;
             for i in range(stepIncrement):
@@ -367,7 +326,7 @@ class VipramCom:
                 timeCtr+=1;
             if timeCtr > totalTimeSlices+500: break;
 
-        print "\n";
+
         fout.close()
 
     def compareOutput(self):
@@ -378,71 +337,78 @@ class VipramCom:
         list1 = f1.read().split()
         list2 = f2.read().split()
 
-        newlist1 = [];
-        newlist2 = [];
-        for i in range(len(list1)):
-            runMode = list1[i][37];
-            if runMode == '1': newlist1.append(list1[i])
-        for i in range(len(list2)):
-            runMode = list2[i][36];
-            if runMode == '1': newlist2.append(list2[i])
+
+
+
+
+
+
+
+
 
         print "list1 lenghth = ", len(list1);
         print "list2 lenghth = ", len(list2);
-        print "newlist1 lenghth = ", len(newlist1);
-        print "newlist2 lenghth = ", len(newlist2);
-
-
-        f1r = open(self._odir+'/'+self._name+'_tmpi_'+str(self._currentMemoryBlock)+'-runmode.txt','w');
-        f2r = open(self._odir+'/'+self._name+'_tmpf_'+str(self._currentMemoryBlock)+'-runmode.txt','w');
-        for line in newlist1: f1r.write(line[:33] + " " + line[33:53] + " " + line[53:114] + "\n");
-        for line in newlist2: f2r.write(line[:32] + " " + line[32:52] + " " + line[52:113] + "\n");
 
 
 
 
 
 
-	mismatch = 0
-        for i in range(len(newlist1)):
 
-            checkData = newlist1[i][0];
-            # checkData = list1[i][37];
-            
-            comp1 = newlist1[i][1:33]
-            comp2 = newlist2[i][:32]
-            row = int(newlist1[i][41:48][::-1],2);
-            col = int(newlist1[i][48:53][::-1],2);
-            row2 = int(newlist2[i][40:47][::-1],2);
-            col2 = int(newlist2[i][47:52][::-1],2);
+
+
+
+
+
+
+
+
+
+        for i in range(len(list1)):
+
+            checkData = list1[i][0];
+
+            comp1 = list1[i][1:33]
+            comp2 = list2[i][:32]
+            row = int(list1[i][41:48][::-1],2);
+            col = int(list1[i][48:53][::-1],2);
+
+
+
+
+
+
+
             #print list1[i], "check data = ", checkData
             #print list2[i]
 
             if int(checkData) == 1:
                 self._checkDataDtr += 1;
-                print "time slice: ", i, ", checkData = ", checkData, ", row = ", row,",",row2, ", col = ", col,",",col2;
+                #print "time slice: ", i, ", checkData = ", checkData, ", row = ", row, ", col = ", col;
                 if comp1 == comp2: self._matchCtr += 1;
 
                 for bitctr in range(32):
                     if (comp1[bitctr:bitctr+1]== "1"): 
                         self.denom += 1;
                         if (comp2[bitctr:bitctr+1]== "1"): self.numer += 1;
+            
+        if (self._checkDataDtr !=0): print "test results: match eff = ",self._matchCtr,"/",self._checkDataDtr," = ",float(self._matchCtr)*100./float(self._checkDataDtr),"%"
 
 
 
 
-        	for bitctr in range(32):
-		    if (comp1[bitctr:bitctr+1] == "0"):
-			if (comp2[bitctr:bitctr+1] == "1"):
-				mismatch += 1;
-    
-        #if (self._checkDataDtr !=0): print "test results: match eff = ",self._matchCtr,"/",self._checkDataDtr," = ",float(self._matchCtr)*100./float(self._checkDataDtr),"%"
-        if (self.denom !=0): print "REAL test results: match efficiency = ",self.numer,"/",self.denom," = ",float(self.numer)*100./float(self.denom),"%"
-	if (mismatch !=0): 
-		print "FALSE POSITIVES: ",(mismatch)
+
+
+
+        if (self.denom !=0): print "REAL test results: match eff = ",self.numer,"/",self.denom," = ",float(self.numer)*100./float(self.denom),"%"
+
+
+
+
+
                 #print comp1, "check data = ", checkData
                 #print comp2
-	
+
  
 
     def changeClockFrequency(self, clock, M, delay):
