@@ -1,0 +1,74 @@
+DATE_16_02_03_TIME_05_25_04
+Starting test...
+05:25:05
+---> Testing at frequency:  50  and voltages(vprech, cvdd, dvdd):  25 25 25
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_DATE_16_02_03_TIME_05_25_04/tmp1_i.txt
+------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  25 , Vpre measured =  4774
+Vdd bit =  25 , Vdd measured =  4787 Dvdd bit =  25 , Dvdd measured =  4768
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.1073905555
+--average stable vdd current =  0.0073832385
+--average stable vprech current =  0.0034475405
+05:29:24
+05:29:25
+---> Testing at frequency:  50  and voltages(vprech, cvdd, dvdd):  26 26 26
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_DATE_16_02_03_TIME_05_25_04/tmp1_i.txt
+------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  26 , Vpre measured =  4071
+Vdd bit =  26 , Vdd measured =  4081 Dvdd bit =  26 , Dvdd measured =  4066
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.111414404
+--average stable vdd current =  0.0106151005
+--average stable vprech current =  0.0038889675
+05:33:44
+05:33:45
+---> Testing at frequency:  50  and voltages(vprech, cvdd, dvdd):  27 27 27
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_DATE_16_02_03_TIME_05_25_04/tmp1_i.txt
+------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  27 , Vpre measured =  4142
+Vdd bit =  27 , Vdd measured =  4152 Dvdd bit =  27 , Dvdd measured =  4133
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.113723797
+--average stable vdd current =  0.014304435
+--average stable vprech current =  0.0043165815
+05:38:03
+05:38:04
+---> Testing at frequency:  50  and voltages(vprech, cvdd, dvdd):  28 28 28
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_DATE_16_02_03_TIME_05_25_04/tmp1_i.txt
+------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  28 , Vpre measured =  4212
+Vdd bit =  28 , Vdd measured =  4220 Dvdd bit =  28 , Dvdd measured =  4203
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.115527087
+--average stable vdd current =  0.0178487235
+--average stable vprech current =  0.004708029
+05:42:23
+05:42:24
+---> Testing at frequency:  50  and voltages(vprech, cvdd, dvdd):  29 29 29
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage/sid_output/loop_DATE_16_02_03_TIME_05_25_04/tmp1_i.txt
+------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4283
+Vdd bit =  29 , Vdd measured =  4292 Dvdd bit =  29 , Dvdd measured =  4274
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.1159800375
+--average stable vdd current =  0.021283021
+--average stable vprech current =  0.0050577145
+05:46:43
+05:46:44
+05:48:34
+05:48:35
+05:48:35
+05:48:35
+05:48:37
+05:48:37
+05:48:37
+05:48:37
+05:48:38
+05:48:38
+05:48:38

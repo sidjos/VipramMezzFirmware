@@ -47,9 +47,12 @@ echo "---Running at frequency $freq and all voltages at $volt"
 python RunPower.py -b --freq $freq --vprech $volt --vdd $volt --dvdd $volt --NStress $stress --odir $output_dir | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|average\|Info' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
+sleep 1s
+done
 
 mv $log $output_dir
 mv results_Match_DVDD_v5.txt $output_dir
 
 echo "...Test End" |tee -a $log
+echo "exit"
 
