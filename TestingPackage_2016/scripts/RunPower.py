@@ -161,14 +161,16 @@ if __name__ == '__main__':
         gr_prech.Draw("l");
         leg.Draw();
         gPad.SetLogy();
-        c_i.SaveAs(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+".pdf");
+        c_i.SaveAs(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+"_dvdd" + str(options.dvdd)+"_vdd" + str(options.vdd)+"_vprepch" + str(options.vprech)+".pdf");
 
         asize = len(vc1._i_dvdd)-1;
         writeToText(1.e-6*vc1._i_dvdd[asize],1.e-6*vc1._i_vdd[asize],1.e-6*vc1._i_prech[asize]);
 
         ####
-        fout = open(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+".txt",'w');
-        for i in range(len(a_t)):
+        fout = open(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+str(options.freq)+"_dvdd" + str(options.dvdd)+"_vdd" + str(options.vdd)+"_vprepch" + str(options.vprech)+".txt",'w');
+        fout.write("Current measurements:\n");
+		fout.write("dvdd vdd vprech\n");
+		for i in range(len(a_t)):
             fout.write(str(a_t[i])+" "+str(a_dvdd[i])+" "+str(a_vdd[i])+" "+str(a_prech[i])+"\n");
         fout.close();
 
