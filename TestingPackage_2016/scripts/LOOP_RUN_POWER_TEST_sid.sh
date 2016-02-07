@@ -50,7 +50,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -64,7 +64,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -78,7 +78,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -92,7 +92,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -106,7 +106,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -120,7 +120,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -134,7 +134,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -148,7 +148,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -162,7 +162,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -176,7 +176,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -190,7 +190,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -210,7 +210,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -224,7 +224,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -238,7 +238,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -252,7 +252,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -266,7 +266,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -280,7 +280,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -294,7 +294,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -308,7 +308,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -322,7 +322,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -336,7 +336,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -350,7 +350,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -364,7 +364,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -378,7 +378,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -392,7 +392,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -406,7 +406,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -420,7 +420,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -434,7 +434,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -448,7 +448,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -462,7 +462,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -476,7 +476,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -490,7 +490,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -504,7 +504,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -518,7 +518,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -532,7 +532,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -546,7 +546,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -560,7 +560,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -574,7 +574,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -588,7 +588,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -602,7 +602,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -616,7 +616,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -630,7 +630,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -644,7 +644,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -658,7 +658,7 @@ stress=1
 
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "---Running at frequency $freq and all voltages at $volt"
+echo "---Running at frequency $freq , voltages dvdd $dvdd , vdd $vdd , vprech $vprech and stress $stress"
 python RunPower.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --NStress $stress --odir $output_dir | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
