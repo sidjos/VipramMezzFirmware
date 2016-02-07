@@ -1,0 +1,66 @@
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  25 , Vpre measured =  4142
+Vdd bit =  25 , Vdd measured =  4152 Dvdd bit =  25 , Dvdd measured =  4135
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.108786875
+--average stable vdd current =  0.007469755
+--average stable vprech current =  0.003514658
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  26 , Vpre measured =  4072
+Vdd bit =  26 , Vdd measured =  4080 Dvdd bit =  26 , Dvdd measured =  4064
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.11055112
+--average stable vdd current =  0.0106345565
+--average stable vprech current =  0.0038998165
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  27 , Vpre measured =  4141
+Vdd bit =  27 , Vdd measured =  4151 Dvdd bit =  27 , Dvdd measured =  4135
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.112556532
+--average stable vdd current =  0.01396861
+--average stable vprech current =  0.0042679795
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  28 , Vpre measured =  4212
+Vdd bit =  28 , Vdd measured =  4223 Dvdd bit =  28 , Dvdd measured =  4203
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.115158107
+--average stable vdd current =  0.017877955
+--average stable vprech current =  0.004683291
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4283
+Vdd bit =  29 , Vdd measured =  4291 Dvdd bit =  29 , Dvdd measured =  4273
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.116768775
+--average stable vdd current =  0.021206964
+--average stable vprech current =  0.005028084
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  30 , Vpre measured =  4353
+Vdd bit =  30 , Vdd measured =  4362 Dvdd bit =  30 , Dvdd measured =  4345
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.119705776
+--average stable vdd current =  0.023464525
+--average stable vprech current =  0.0054215835
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  31 , Vpre measured =  4422
+Vdd bit =  31 , Vdd measured =  4431 Dvdd bit =  31 , Dvdd measured =  4416
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.122862436
+--average stable vdd current =  0.0247211565
+--average stable vprech current =  0.005804728
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  32 , Vpre measured =  4493
+Vdd bit =  32 , Vdd measured =  4501 Dvdd bit =  32 , Dvdd measured =  4485
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.1291103295
+--average stable vdd current =  0.025610613
+--average stable vprech current =  0.006293294
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  33 , Vpre measured =  4563
+Vdd bit =  33 , Vdd measured =  4574 Dvdd bit =  33 , Dvdd measured =  4557
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.123751332
+--average stable vdd current =  0.0265103105
+--average stable vprech current =  0.006138577
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  34 , Vpre measured =  4634
+Vdd bit =  34 , Vdd measured =  4643 Dvdd bit =  34 , Dvdd measured =  4625
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.125556997
+--average stable vdd current =  0.026994136
+--average stable vprech current =  0.0064804725
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  35 , Vpre measured =  4704
+Vdd bit =  35 , Vdd measured =  4714 Dvdd bit =  35 , Dvdd measured =  4697
+memoryBlocksNeeded =  1
+--average stable dvdd current =  0.1262391825
+--average stable vdd current =  0.0279439175
+--average stable vprech current =  0.006819138

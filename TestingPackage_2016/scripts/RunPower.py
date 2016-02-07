@@ -169,8 +169,8 @@ if __name__ == '__main__':
         ####
         fout = open(options.odir+"/power_NStress"+str(options.NStress)+"_freq"+str(options.freq)+str(options.freq)+"_dvdd" + str(options.dvdd)+"_vdd" + str(options.vdd)+"_vprepch" + str(options.vprech)+".txt",'w');
         fout.write("Current measurements:\n");
-		fout.write("dvdd vdd vprech\n");
-		for i in range(len(a_t)):
+	fout.write("dvdd vdd vprech\n");
+	for i in range(len(a_t)):
             fout.write(str(a_t[i])+" "+str(a_dvdd[i])+" "+str(a_vdd[i])+" "+str(a_prech[i])+"\n");
         fout.close();
 

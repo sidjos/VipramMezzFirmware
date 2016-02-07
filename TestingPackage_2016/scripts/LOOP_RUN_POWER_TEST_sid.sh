@@ -70,7 +70,7 @@ echo "...Test End" |tee -a $log
 mv $log $output_dir
 mv results_Match_DVDD_v5.txt $output_dir
 
-more log | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|average\|Info\|No \|missing' >> $greplog
+more $log | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|average\|Info\|No \|missing' >> $greplog
 cp $greplog $output_dir
 
 
