@@ -45,7 +45,7 @@ echo "Starting test..." |tee -a $log
 vprech=25
 vdd=25
 dvdd=25
-freq=63.5
+freq=63
 stress=1
 
 timestamp=$(date +%T)
