@@ -5,7 +5,7 @@
 timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 
 log=full_log_RUN_POWER_TEST_sid.log
-greplog = log_RUN_POWER_TEST_sid.log
+greplog=log_RUN_POWER_TEST_sid.log
 
 if [ -f $log ]; then
    echo "File '$log' Exists -> creating copy of old file with timestamp appended and creating new log"
