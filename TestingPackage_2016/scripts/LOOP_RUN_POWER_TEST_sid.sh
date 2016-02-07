@@ -38,7 +38,7 @@ stress=10
 
 v_start=25
 v_step=1
-v_end=28
+v_end=26
 
 sleep 1s
 for volt in `seq $v_start $v_step $v_end`;
