@@ -30,7 +30,7 @@ fi
 
 
 output_dir=/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_$timestamp
-mkdir $output_dir
+mkdir -v $output_dir |tee -a $log
 
 timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
 echo $timestamp |tee -a $log
@@ -51,9 +51,9 @@ vprech=29
 vdd=35
 dvdd=35
 
-freq_start=68
+freq_start=58
 freq_step=2
-freq_end=78
+freq_end=65
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;

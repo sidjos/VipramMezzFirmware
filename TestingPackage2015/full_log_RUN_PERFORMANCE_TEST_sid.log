@@ -1,0 +1,57 @@
+mkdir: created directory `/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_10_TIME_05_14_25'
+DATE_16_02_10_TIME_05_14_25
+Starting test...
+DATE_16_02_10_TIME_05_14_25
+
+05:14:26
+[?1034h---> performance testing REAL match efficiency at frequency =  58  and voltages(vprech, vdd, vdd):  29 35 35
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_10_TIME_05_14_25/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4773
+Vdd bit =  35 , Vdd measured =  4786 Dvdd bit =  35 , Dvdd measured =  4768
+memoryBlocksNeeded =  9
+REAL test results: match efficiency =  3 / 3  =  100.0 %
+REAL test results: match efficiency =  5 / 5  =  100.0 %
+05:20:32
+
+05:20:33
+[?1034h---> performance testing REAL match efficiency at frequency =  60  and voltages(vprech, vdd, vdd):  29 35 35
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_10_TIME_05_14_25/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4357
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4775
+memoryBlocksNeeded =  11
+REAL test results: match efficiency =  0 / 1  =  0.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+REAL test results: match efficiency =  3 / 5  =  60.0 %
+05:27:45
+
+05:27:46
+[?1034h---> performance testing REAL match efficiency at frequency =  62  and voltages(vprech, vdd, vdd):  29 35 35
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_10_TIME_05_14_25/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4357
+Vdd bit =  35 , Vdd measured =  4786 Dvdd bit =  35 , Dvdd measured =  4775
+memoryBlocksNeeded =  11
+REAL test results: match efficiency =  0 / 1  =  0.0 %
+REAL test results: match efficiency =  2 / 5  =  40.0 %
+REAL test results: match efficiency =  2 / 5  =  40.0 %
+05:34:54
+
+05:34:55
+[?1034h---> performance testing REAL match efficiency at frequency =  64  and voltages(vprech, vdd, vdd):  29 35 35
+------------------------
+-----> written to /home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_10_TIME_05_14_25/tmp1_i.txt
+ ------------------------
+Firmware identity =  0xdeadbeef , firmware version =  1 , Vpre bit =  29 , Vpre measured =  4357
+Vdd bit =  35 , Vdd measured =  4785 Dvdd bit =  35 , Dvdd measured =  4776
+memoryBlocksNeeded =  11
+REAL test results: match efficiency =  0 / 1  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+REAL test results: match efficiency =  0 / 5  =  0.0 %
+05:42:03
+...Test End
+DATE_16_02_10_TIME_05_42_04

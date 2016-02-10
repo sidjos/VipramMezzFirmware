@@ -47,7 +47,7 @@ parser.add_option('--vprech',action="store",type="int",dest="vprech",default=38)
 parser.add_option('--vdd',action="store",type="int",dest="vdd",default=38)
 parser.add_option('--dvdd',action="store",type="int",dest="dvdd",default=38)
 
-parser.add_option('--stresstest', action='store_true', dest='stress_test', default=False)
+parser.add_option('--stresstest', action='store_true', dest='stresstest', default=False)
 
 parser.add_option('--rep',action="store",type="int",dest="rep",default=1)
 
@@ -85,10 +85,10 @@ if __name__ == '__main__':
     #print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
-	if(stress_test):
-	    print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
+    if options.stresstest:
+        print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
         pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
-	else:
+    else :
         print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
         data_match=32767
         data_miss=0
