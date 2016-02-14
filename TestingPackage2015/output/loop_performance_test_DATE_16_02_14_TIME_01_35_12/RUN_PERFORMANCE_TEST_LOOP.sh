@@ -62,7 +62,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --stresstest $stresstest | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|missing\|No \|error\|Error\|Invalid' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 

@@ -1386,7 +1386,3 @@ len(vc1._i_vdd) =  10
 len(vc1._i_vdd) =  10
 02:38:02
 ...Test End
-`full_log_RUN_PERFORMANCE_TEST_sid.log' -> `/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_14_TIME_02_19_48/full_log_RUN_PERFORMANCE_TEST_sid.log'
-`Run_Original.py' -> `/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_14_TIME_02_19_48/Run_Original.py'
-`RUN_PERFORMANCE_TEST_LOOP.sh' -> `/home/sidjoshi/test_sid_2015/VipramMezzFirmware/TestingPackage2015/output/loop_performance_test_DATE_16_02_14_TIME_02_19_48/RUN_PERFORMANCE_TEST_LOOP.sh'
-DATE_16_02_14_TIME_02_38_03
