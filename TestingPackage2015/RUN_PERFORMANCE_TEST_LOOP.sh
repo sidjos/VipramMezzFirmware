@@ -43,7 +43,7 @@ echo $timestamp |tee -a $log
 
 rep=5
 
-stresstest=False
+stresstest=True
 stress=1
 
 
@@ -53,7 +53,7 @@ dvdd=35
 
 freq_start=58
 freq_step=2
-freq_end=65
+freq_end=62
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -62,7 +62,7 @@ echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|missing\|No \|error\|Error\|Invalid' | tee  -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --stresstest $stresstest | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|missing\|No \|error\|Error\|Invalid' | tee  -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
@@ -72,8 +72,9 @@ done
 
 
 echo "...Test End" |tee -a $log
-cp $log $output_dir
-cp RUN_PERFORMANCE_TEST_LOOP.sh $output_dir
+cp -v $log $output_dir | tee -a $log
+cp -v Run_Original.py $output_dir | tee -a $log
+cp -v RUN_PERFORMANCE_TEST_LOOP.sh $output_dir | tee -a $log
 mv results_Match_DVDD_v5.txt $output_dir
 
 timestamp=$(date +DATE_%y_%m_%d_TIME_%H_%M_%S)
