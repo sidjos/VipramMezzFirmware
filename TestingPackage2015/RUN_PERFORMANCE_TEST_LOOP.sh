@@ -61,7 +61,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -69,50 +69,6 @@ sleep 1s
 done
 
 
-
-
-vdd=25
-dvdd=25
-vprech=26
-
-freq_start=66
-freq_step=2
-freq_end=72
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-vdd=25
-dvdd=25
-vprech=27
-
-freq_start=74
-freq_step=2
-freq_end=78
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
 
 
 
@@ -120,9 +76,9 @@ vdd=25
 dvdd=25
 vprech=28
 
-freq_start=80
+freq_start=76
 freq_step=2
-freq_end=86
+freq_end=82
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -130,55 +86,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-vdd=25
-dvdd=25
-vprech=29
-
-freq_start=96
-freq_step=2
-freq_end=102
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=25
-dvdd=25
-vprech=30
-
-freq_start=106
-freq_step=2
-freq_end=112
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -192,9 +100,9 @@ vdd=25
 dvdd=25
 vprech=31
 
-freq_start=126
+freq_start=120
 freq_step=2
-freq_end=136
+freq_end=128
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -202,54 +110,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-vdd=25
-dvdd=25
-vprech=32
-
-freq_start=138
-freq_step=2
-freq_end=144
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=25
-dvdd=25
-vprech=33
-
-freq_start=150
-freq_step=2
-freq_end=160
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -263,9 +124,9 @@ vdd=25
 dvdd=25
 vprech=34
 
-freq_start=154
+freq_start=164
 freq_step=2
-freq_end=166
+freq_end=174
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -273,7 +134,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -298,7 +159,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -311,57 +172,9 @@ done
 
 vdd=30
 dvdd=30
-vprech=25
+vprech=28
 
-freq_start=50
-freq_step=2
-freq_end=54
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-vdd=30
-dvdd=30
-vprech=26
-
-freq_start=54
-freq_step=2
-freq_end=58
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-vdd=30
-dvdd=30
-vprech=27
-
-freq_start=62
+freq_start=60
 freq_step=2
 freq_end=68
 
@@ -371,7 +184,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -383,11 +196,11 @@ done
 
 vdd=30
 dvdd=30
-vprech=28
+vprech=30
 
-freq_start=66
+freq_start=76
 freq_step=2
-freq_end=72
+freq_end=82
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -395,7 +208,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -404,9 +217,136 @@ done
 
 
 
+
+
 vdd=30
 dvdd=30
-vprech=29
+vprech=32
+
+freq_start=84
+freq_step=2
+freq_end=96
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+vdd=35
+dvdd=35
+vprech=27
+
+freq_start=50
+freq_step=2
+freq_end=58
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+vdd=35
+dvdd=35
+vprech=28
+
+freq_start=54
+freq_step=2
+freq_end=62
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+
+vdd=35
+dvdd=35
+vprech=30
+
+freq_start=60
+freq_step=2
+freq_end=66
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+vdd=35
+dvdd=35
+vprech=31
+
+freq_start=66
+freq_step=2
+freq_end=74
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+vdd=35
+dvdd=35
+vprech=32
 
 freq_start=70
 freq_step=2
@@ -418,132 +358,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=30
-dvdd=30
-vprech=30
-
-freq_start=78
-freq_step=2
-freq_end=82
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=30
-dvdd=30
-vprech=31
-
-freq_start=86
-freq_step=2
-freq_end=90
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=30
-dvdd=30
-vprech=32
-
-freq_start=96
-freq_step=2
-freq_end=102
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=30
-dvdd=30
-vprech=33
-
-freq_start=108
-freq_step=2
-freq_end=112
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=30
-dvdd=30
-vprech=34
-
-freq_start=118
-freq_step=2
-freq_end=124
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -555,38 +370,13 @@ done
 
 
 
-vdd=30
-dvdd=30
-vprech=35
-
-freq_start=140
-freq_step=2
-freq_end=146
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=35
-dvdd=35
+vdd=25
+dvdd=25
 vprech=25
 
-freq_start=40
+freq_start=60
 freq_step=2
-freq_end=46
+freq_end=66
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -594,7 +384,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -605,14 +395,13 @@ done
 
 
 
-
-vdd=35
-dvdd=35
+vdd=26
+dvdd=26
 vprech=26
 
-freq_start=48
+freq_start=64
 freq_step=2
-freq_end=52
+freq_end=68
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -620,7 +409,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -631,110 +420,13 @@ done
 
 
 
-vdd=35
-dvdd=35
+vdd=27
+dvdd=27
 vprech=27
-
-freq_start=56
-freq_step=2
-freq_end=58
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-
-vdd=35
-dvdd=35
-vprech=28
-
-freq_start=56
-freq_step=2
-freq_end=60
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-vdd=35
-dvdd=35
-vprech=28
-
-freq_start=56
-freq_step=2
-freq_end=60
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-vdd=35
-dvdd=35
-vprech=29
-
-freq_start=58
-freq_step=2
-freq_end=62
-
-sleep 1s
-for freq in `seq $freq_start $freq_step $freq_end`;
-do
-echo "" | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
-python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
-timestamp=$(date +%T)
-echo $timestamp |tee -a $log
-sleep 1s 
-done
-
-
-
-
-vdd=35
-dvdd=35
-vprech=30
 
 freq_start=66
 freq_step=2
-freq_end=70
+freq_end=72
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -742,7 +434,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -752,11 +444,37 @@ done
 
 
 
-vdd=35
-dvdd=35
-vprech=31
 
-freq_start=74
+vdd=28
+dvdd=28
+vprech=28
+
+freq_start=68
+freq_step=2
+freq_end=74
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+vdd=29
+dvdd=29
+vprech=29
+
+freq_start=72
 freq_step=2
 freq_end=78
 
@@ -766,7 +484,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -777,11 +495,11 @@ done
 
 
 
-vdd=35
-dvdd=35
-vprech=32
+vdd=30
+dvdd=30
+vprech=30
 
-freq_start=78
+freq_start=74
 freq_step=2
 freq_end=82
 
@@ -791,7 +509,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -802,13 +520,13 @@ done
 
 
 
-vdd=35
-dvdd=35
-vprech=33
+vdd=31
+dvdd=31
+vprech=31
 
-freq_start=80
+freq_start=76
 freq_step=2
-freq_end=84
+freq_end=82
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -816,7 +534,7 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
@@ -828,11 +546,36 @@ done
 
 
 
-vdd=35
-dvdd=35
-vprech=34
+vdd=32
+dvdd=32
+vprech=32
 
-freq_start=86
+freq_start=84
+freq_step=2
+freq_end=90
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
+
+
+
+
+
+vdd=33
+dvdd=33
+vprech=33
+
+freq_start=84
 freq_step=2
 freq_end=92
 
@@ -842,13 +585,37 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
 done
 
+
+
+
+
+vdd=34
+dvdd=34
+vprech=34
+
+freq_start=90
+freq_step=2
+freq_end=96
+
+sleep 1s
+for freq in `seq $freq_start $freq_step $freq_end`;
+do
+echo "" | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
+python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
+timestamp=$(date +%T)
+echo $timestamp |tee -a $log
+sleep 1s 
+done
 
 
 
@@ -860,7 +627,7 @@ vprech=35
 
 freq_start=96
 freq_step=2
-freq_end=102
+freq_end=100
 
 sleep 1s
 for freq in `seq $freq_start $freq_step $freq_end`;
@@ -868,13 +635,12 @@ do
 echo "" | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
-echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress"
+echo "LOOP----Running at frequency $freq and voltages $vprech $vdd $dvdd and stress test is $stresstest at $stress" | tee -a $log
 python Run_Original.py -b --freq $freq --vprech $vprech --vdd $vdd --dvdd $dvdd --rep $rep --odir $output_dir --NStress $stress --stresstest $stresstest | tee -a $log
 timestamp=$(date +%T)
 echo $timestamp |tee -a $log
 sleep 1s 
 done
-
 
 
 

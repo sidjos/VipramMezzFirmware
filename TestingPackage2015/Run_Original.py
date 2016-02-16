@@ -86,7 +86,7 @@ if __name__ == '__main__':
     #pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
 	
     if options.stresstest:
-        print "testing REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq 
+        print "---> testing Stress Test -> REAL match efficiency with NStress = ",options.NStress," and frequency = ",options.freq , " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd 
         pattern1 = stressTest("tmp1",options.NStress,options.freq,options.odir,options.Load);
     else :
         print "---> performance testing REAL match efficiency at frequency = ", options.freq, " and voltages(vprech, vdd, vdd): ", options.vprech, options.vdd, options.dvdd  
