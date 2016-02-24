@@ -39,7 +39,7 @@ echo $timestamp |tee -a $log
 # | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|average\|Info\|No \|missing' 
 
 
-echo "Starting test..." |tee -a $log
+echo "Starting POWER test..." |tee -a $log
 
 #-------------------------------------------------------------------------------------
 vprech=25
@@ -673,7 +673,7 @@ mv results_Match_DVDD_v5.txt $output_dir
 cp -v RunPower.py $output_dir | tee -a $log
 cp -v test_definitions.py $output_dir | tee -a $log
 cp -v LOOP_RUN_POWER_TEST_sid.sh $output_dir | tee -a $log
-more $log | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|memoryBlocksNeeded\|missing\|No \|error\|Error\|Invalid' >> $greplog
+more $log | grep 'REAL\|---\|Vpre bit\|Vdd bit\|Dvdd bit\|--average\|memoryBlocksNeeded\|missing\|No \|error\|Error\|Invalid' >> $greplog
 cp -v $greplog $output_dir
 
 
